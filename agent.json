@@ -1,0 +1,35 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "谷歌广告投流专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "关键词、落地页、转化和广告草案。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "谷歌",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "ft-google-ads-marketing"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-ads-specialist.git",
+    "branch": "main"
+  }
+}
